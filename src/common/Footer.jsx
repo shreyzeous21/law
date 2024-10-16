@@ -8,10 +8,11 @@ function Footer() {
           <div className="container-xl container-lg-fluid container">
             <div className="row gy-5">
               <div className="col-lg-3 col-md-6">
-                <div className="footer-about">
+                <div className="footer-about text-white">
+                  here comes the logo
                   <img
-                    src="assets/images/icons/vkt.png"
-                    className="img-fl"
+                    src="assets/images/icons/vkt2.png"
+                    className="img-fluid text-white"
                     alt="image"
                   />
                   <p>Commitment to our Client`s Legal Needs Since 1959</p>
@@ -193,25 +194,33 @@ function Footer() {
               <div className="col-lg-3 col-md-6 d-flex justify-content-lg-end">
                 <div className="footer-item text-white">
                   <h4>Legal services</h4>
-                  <ul>
-                    <li>Bail, Quashing, Trial</li>
-                    <li>Services, Appointments, Promotions</li>
-                    <li>Child Custody and Matrimonial</li>
-                    <li>Dowry-related and Domestic Violence</li>
-                    <li>Property and Real Estate Law</li>
-                    <li>Rent Control and Eviction</li>
-                    <li>Sexual Offences and POCSO</li>
-                    <li>Land Acquisition, Urbanisation</li>
-                    <li>Cheque Bouncing (138 N.I. Act) and Recovery</li>
-                    <li>Cooperative Societies</li>
-                    <li>Labour and Employment</li>
-                    <li>Will Writing and Registration</li>
-                    <li>Marriage Registration</li>
-                    <li>Trademark Registration</li>
-                    <li>Consumer Disputes</li>
-                    <li>Medical Negligence</li>
-                    <li>Arbitration, Mediation and Conciliation</li>
-                  </ul>
+                  <div className="row">
+                    <div className="col-6">
+                      <ul>
+                        <li>Bail, Quashing, Trial</li>
+                        <li>Services, Appointments, Promotions</li>
+                        <li>Child Custody and Matrimonial</li>
+                        <li>Dowry-related and Domestic Violence</li>
+                        <li>Property and Real Estate Law</li>
+                        <li>Rent Control and Eviction</li>
+                        <li>Sexual Offences and POCSO</li>
+                        <li>Land Acquisition, Urbanisation</li>
+                      </ul>
+                    </div>
+                    <div className="col-6">
+                      <ul>
+                        <li>Cheque Bouncing (138 N.I. Act) and Recovery</li>
+                        <li>Cooperative Societies</li>
+                        <li>Labour and Employment</li>
+                        <li>Will Writing and Registration</li>
+                        <li>Marriage Registration</li>
+                        <li>Trademark Registration</li>
+                        <li>Consumer Disputes</li>
+                        <li>Medical Negligence</li>
+                        <li>Arbitration, Mediation and Conciliation</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
