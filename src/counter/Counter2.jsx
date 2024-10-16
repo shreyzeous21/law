@@ -3,7 +3,7 @@ import CountUp from "react-countup";
 function Counter2() {
   return (
     <>
-     <div className="counter-section2">
+     <div className="counter-section2 pt-120">
   <div className="container">
     <div className="row justify-content-center gx-lg-0 g-4">
       <div className="col-lg-3 col-md-4 col-sm-6">
