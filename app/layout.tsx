@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import Footer from "@/components/Footer";
 
-const font = Raleway({ weight: "100", subsets: ["latin"] });
+const font = Raleway({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Law",
@@ -18,11 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${font.className} antialiased bg-[#f9f7f5] text-black`}
+        className={`${font.className} lg:pt-[7rem] pt-[4rem]  antialiased bg-[#f9f7f5] text-black`}
         suppressHydrationWarning
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
