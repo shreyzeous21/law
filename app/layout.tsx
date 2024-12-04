@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${font.className} lg:pt-[7rem] pt-[4rem]  antialiased bg-[#f9f7f5] text-black`}
+        className={`${font.className} lg:pt-[7rem] pt-[4rem] antialiased bg-[#f9f7f5] text-black`}
         suppressHydrationWarning
       >
         <Header />
