@@ -26,7 +26,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="h-[90vh] w-full flex mx-auto justify-center relative">
+    <div className="h-[90vh]  w-full flex mx-auto justify-center relative">
       {/* Swiper Slider */}
       <Swiper
         modules={[Pagination, Autoplay]}
@@ -38,7 +38,7 @@ const Hero = () => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
-              className="h-full w-full mx-auto justify-center flex  bg-cover bg-center"
+              className="h-full w-full px-4  mx-auto justify-center flex bg-cover bg-center"
               style={{ backgroundImage: `url('${slide.image}')` }}
             >
               <div className="max-w-6xl gap-[2rem] flex items-center lg:h-[80vh] flex-col lg:flex-row justify-center lg:justify-start w-full mx-auto relative z-10">
@@ -69,11 +69,11 @@ const Hero = () => {
                 </div>
 
                 {/* Content Section */}
-                <div className="w-full h-full justify-center gap-2 lg:w-1/2 p-4 font-semibold flex flex-col text-white">
+                <div className="w-full h-full justify-center gap-2 lg:w-1/2 p-4  flex flex-col text-white">
                   <span className="uppercase text-lg text-[#b8967e]">
                     {slide.title}
                   </span>
-                  <p className="leading-tight text-5xl">
+                  <p className="leading-tight font-bold text-4xl lg:text-5xl">
                     {slide.subtitle.split(" ")[0]}{" "}
                     <span className="text-[#b8967e]">
                       {slide.subtitle.split(" ")[1]}
