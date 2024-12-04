@@ -14,6 +14,7 @@ const Home = () => {
       <PracticeArea />
       <hr />
       <Testimonials />
+      <hr />
     </div>
   );
 };
