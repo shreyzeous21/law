@@ -3,6 +3,7 @@ import { Raleway } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ContactBanner } from "@/components/ContactBanner";
 
 const font = Raleway({ weight: "400", subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <ContactBanner />
         <Footer />
       </body>
     </html>
