@@ -4,7 +4,7 @@ import React from "react";
 const PracticeArea = () => {
   return (
     <div className="justify-center mx-auto flex max-w-6xl px-4 flex-col gap-4 w-full">
-      <span className="text-black bg-gray-200 text-center  py-1 px-4 justify-center items-center flex w-1/2 mx-auto  rounded-md shadow-md">
+      <span className="text-black bg-gray-200 text-center lg:w-[10vw] w-auto lg:mx-0 mx-auto items-center py-1 px-4 justify-center  rounded-md shadow-md">
         Practice Area
       </span>
       {/* row 1 */}
