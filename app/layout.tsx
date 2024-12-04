@@ -25,8 +25,8 @@ export default function RootLayout({
       >
         <Header />
         {children}
-        {/* <ContactBanner /> */}
-        {/* <Footer /> */}
+        <ContactBanner />
+        <Footer />
       </body>
     </html>
   );
