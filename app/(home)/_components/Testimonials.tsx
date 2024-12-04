@@ -1,19 +1,20 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import * as React from "react"
+import Image from "next/image"
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import useEmblaCarousel from 'embla-carousel-react'
+import type { EmblaOptionsType } from 'embla-carousel'
+import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 
 interface Testimonial {
-  id: number;
-  name: string;
-  date: string;
-  content: string;
-  image: string;
-  rating: number;
+  id: number
+  name: string
+  date: string
+  content: string
+  image: string
+  rating: number
 }
 
 const testimonials: Testimonial[] = [
@@ -21,69 +22,63 @@ const testimonials: Testimonial[] = [
     id: 1,
     name: "Alex Stokes",
     date: "10 October 2024",
-    content:
-      "I can't thank Your Law Firm Name enough for their unwavering support during my divorce. Their team of lawyers guided me with compassion and expertise, making a challenging process feel manageable. I highly recommend their services to & lawyer.",
+    content: "I can't thank Your Law Firm Name enough for their unwavering support during my divorce. Their team of lawyers guided me with compassion and expertise, making a challenging process feel manageable. I highly recommend their services to & lawyer.",
     image: "/placeholder.svg?height=64&width=64",
-    rating: 5,
+    rating: 5
   },
   {
     id: 2,
     name: "Ben Stokes",
     date: "10 October 2024",
-    content:
-      "I can't thank Your Law Firm Name enough for their unwavering support during my divorce. Their team of lawyers guided me with compassion and expertise, making a challenging process feel manageable. I highly recommend their services to & lawyer.",
+    content: "I can't thank Your Law Firm Name enough for their unwavering support during my divorce. Their team of lawyers guided me with compassion and expertise, making a challenging process feel manageable. I highly recommend their services to & lawyer.",
     image: "/placeholder.svg?height=64&width=64",
-    rating: 5,
+    rating: 5
   },
   {
     id: 3,
     name: "Charlie Stokes",
     date: "11 October 2024",
-    content:
-      "Exceptional service from Your Law Firm Name during my property dispute. Their attention to detail and strategic approach led to a favorable outcome. Highly recommended for anyone needing expert legal assistance.",
+    content: "Exceptional service from Your Law Firm Name during my property dispute. Their attention to detail and strategic approach led to a favorable outcome. Highly recommended for anyone needing expert legal assistance.",
     image: "/placeholder.svg?height=64&width=64",
-    rating: 5,
+    rating: 5
   },
   {
     id: 4,
     name: "Dana Stokes",
     date: "12 October 2024",
-    content:
-      "Your Law Firm Name provided outstanding support during my business litigation. Their team's expertise and dedication were crucial in resolving the case efficiently. I'm grateful for their professional and personalized service.",
+    content: "Your Law Firm Name provided outstanding support during my business litigation. Their team's expertise and dedication were crucial in resolving the case efficiently. I'm grateful for their professional and personalized service.",
     image: "/placeholder.svg?height=64&width=64",
-    rating: 5,
-  },
-];
+    rating: 5
+  }
+]
 
 const OPTIONS: EmblaOptionsType = {
-  align: "start",
+  align: 'start',
   loop: true,
   skipSnaps: false,
   inViewThreshold: 0.7,
-};
+}
 
-const SLIDE_COUNT = testimonials.length;
-const SLIDES_PER_VIEW_MOBILE = 1;
-const SLIDES_PER_VIEW_DESKTOP = 2;
+const SLIDE_COUNT = testimonials.length
+const SLIDES_PER_VIEW_MOBILE = 1
+const SLIDES_PER_VIEW_DESKTOP = 2
 
-export default function Testimonials() {
-  const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
+export default function TestimonialsSection() {
+  const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS)
 
   const scrollPrev = React.useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
 
   const scrollNext = React.useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
 
   return (
     <section className="py-16 px-4 md:px-6 lg:px-8 bg-[#F9F7F4]">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
-          <span className="text-sm font-medium text-muted-foreground">
-            Testimonials
-          </span>
+          <span className="text-sm font-medium text-muted-foreground">Testimonials</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2 flex items-center gap-2">
             Real Stories, Real Results
             <span className="text-orange-500">
@@ -141,17 +136,11 @@ export default function Testimonials() {
                             className="rounded-full"
                           />
                           <div>
-                            <div className="font-semibold">
-                              {testimonial.name}
-                            </div>
-                            <div className="text-sm text-muted-foreground">
-                              {testimonial.date}
-                            </div>
+                            <div className="font-semibold">{testimonial.name}</div>
+                            <div className="text-sm text-muted-foreground">{testimonial.date}</div>
                           </div>
                         </div>
-                        <div className="text-4xl text-muted-foreground/20">
-                          "
-                        </div>
+                        <div className="text-4xl text-muted-foreground/20">"</div>
                       </div>
                     </CardContent>
                   </Card>
@@ -183,5 +172,6 @@ export default function Testimonials() {
         </div>
       </div>
     </section>
-  );
+  )
 }
+
