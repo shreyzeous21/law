@@ -79,8 +79,8 @@ export default function TestimonialsSection() {
   }, [emblaApi]);
 
   return (
-    <section className="px-4 ">
-      <div className="max-w-6xl mx-auto">
+    <section className="">
+      <div className="max-w-6xl px-4 mx-auto">
         <div className="mb-12">
           <span className="text-sm shadow-md bg-slate-200 py-2 px-4">
             Testimonials
