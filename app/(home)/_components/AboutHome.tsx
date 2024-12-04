@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import CountUp from "react-countup";
+// import CountUp from "react-countup";
 
 const AboutHome = () => {
   // Animation Variants
@@ -43,7 +43,8 @@ const AboutHome = () => {
           </motion.div>
           <div className="bg-gray-200 w-full h-40 lg:h-48 rounded-lg shadow-md overflow-hidden flex flex-col justify-center items-start p-4">
             <span className="text-[#b8967e] text-4xl font-bold">
-              <CountUp start={0} end={25} duration={5} />+
+              {/* <CountUp start={0} end={25} duration={5} />+ */}
+              25+
             </span>
             <p className="text-black font-semibold text-lg">
               Years of Experience
