@@ -19,6 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="shortcut icon" href="/logo.webp" type="image/x-icon" />
+      </head>
       <body
         className={`${font.className} lg:pt-[7rem] pt-[4rem] antialiased bg-[#f9f7f5] text-black`}
         suppressHydrationWarning

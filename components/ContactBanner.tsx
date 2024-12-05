@@ -20,7 +20,7 @@ export function ContactBanner() {
               </div>
               <div>
                 <p className="text-white/70 text-sm">Call Us 24/7</p>
-                <p className="text-white font-semibold">+123 456 7890</p>
+                <p className="text-white font-semibold">+91 9582678877</p>
               </div>
             </div>
             <div className="bg-[#0D4435] rounded-lg p-6 flex items-center gap-4 min-w-[280px]">
@@ -29,7 +29,9 @@ export function ContactBanner() {
               </div>
               <div>
                 <p className="text-white/70 text-sm">Mail Us Anytime</p>
-                <p className="text-white font-semibold">Lawsy@gmail.com</p>
+                <p className="text-white font-semibold">
+                  info@advsarthakmittal.com
+                </p>
               </div>
             </div>
           </div>
