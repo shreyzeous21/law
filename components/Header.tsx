@@ -48,7 +48,7 @@ export function Header() {
           <div className="flex gap-5 items-center">
             <div>
               <a href="/">
-                <img src="/logo.png" alt="Logo" className="h-8 md:h-10" />
+                <img src="/logo.webp" alt="Logo" className="h-8 md:h-10" />
               </a>
             </div>
 
@@ -78,10 +78,10 @@ export function Header() {
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
-            <button className="p-2 gap-2 hover:text-[#b8967e]  items-center transition duration-300  flex flex-row">
+            {/* <button className="p-2 gap-2 hover:text-[#b8967e]  items-center transition duration-300  flex flex-row">
               <PhoneCall size={20} />
               <span>+91 9582678877</span>
-            </button>
+            </button> */}
             <button
               className="p-2 flex items-center"
               onClick={() => setIsSearchOpen(true)}
