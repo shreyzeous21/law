@@ -79,7 +79,7 @@ export function ContactForm() {
                   </svg>
                 </span> */}
               </h2>
-              <p className="text-gray-500 md:text-sm/relaxed ">
+              <p className="text-gray-500 lg:text-lg/relaxed ">
                 We understand that every divorce case is unique and personal. If
                 you&apos;re ready to take the next step or simply have
                 questions.

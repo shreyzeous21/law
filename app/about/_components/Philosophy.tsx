@@ -21,7 +21,7 @@ const Philosophy = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <p className="text-gray-700 text-lg">
+          <p className="text-gray-700 text-lg/relaxed ">
             One of the most distinguished and celebrated first-principles
             lawyers of the Delhi High Court; Chambers of Sarthak Mittalk,
             Advocates & Solicitors strives on the same virtuosity and dedication

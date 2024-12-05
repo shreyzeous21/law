@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "./_components/Hero";
 import AboutHome from "./_components/AboutHome";
 import PracticeArea from "./_components/PracticeArea";
-import Testimonials from "./_components/Testimonials";
+import Testimonials from "@/components/Testimonials";
 import { ContactForm } from "@/components/ContactForm";
 
 const Home = () => {

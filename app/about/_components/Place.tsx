@@ -13,7 +13,7 @@ const Place = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <motion.h4
-            className="text-lg font-bold text-[#b8967e]"
+            className="text-lg/relaxed  font-bold text-[#b8967e]"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -29,7 +29,7 @@ const Place = () => {
           >
             You've Come to The Right Place.
           </motion.h2>
-          <p className="text-gray-700 text-lg">
+          <p className="text-gray-700 text-lg/relaxed ">
             Chambers of Sarthak Mittalk, Advocates & Solicitors, spearheaded by
             Mr. Sarthak Mittalk, is a premier full-service litigation firm based
             in New Delhi. With more than three decades of experience in the
