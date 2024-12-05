@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0B0F1E] text-white">
       <div className="max-w-6xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
           {/* Our Address */}
           <div className="space-y-4">
             <h3 className="text-xl font-semibold flex items-center gap-2">
