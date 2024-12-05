@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 import Topbar from "./Topbar";
 
 export function Header() {
@@ -103,8 +104,13 @@ export function Header() {
       </div>
 
       {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 top-16 z-40 md:hidden text-black bg-white shadow-lg">
+      <motion.div
+        initial={{ height: 0 }}
+        animate={{ height: isMenuOpen ? 'auto' : 0 }}
+        transition={{ duration: 0.5 }}
+        className={`fixed inset-0 top-16 z-40 md:hidden text-black bg-white shadow-lg overflow-hidden`}
+      >
+        {isMenuOpen && (
           <div className="px-4 pt-2 pb-3 space-y-1 h-full overflow-y-auto">
             {menuItems.map((item, index) =>
               item.dropdownItems.length > 0 ? (
@@ -132,8 +138,8 @@ export function Header() {
               )
             )}
           </div>
-        </div>
-      )}
+        )}
+      </motion.div>
     </header>
   );
 }
