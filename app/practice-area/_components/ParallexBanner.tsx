@@ -104,8 +104,11 @@ const ParallexBanner = () => {
           />
         </div>
         <div className="text-lg">
-          <p>Monday To Saturday 9.00 AM - 10.30 PM</p>
-          <p>168/170, Ave 01, Old York Drive Rich, Mirpur, Dhaka, Bangladesh</p>
+          <p>Monday To Saturday, 9.00 AM - 8.00 PM</p>
+          <p>
+            C-337, IIIrd Floor, Bhutani Cyber Park Plot No.28-29 Industrial Area
+            Sector-62, Noida-201309, Uttar Pradesh
+          </p>
         </div>
       </div>
     </div>
