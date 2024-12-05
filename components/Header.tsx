@@ -80,7 +80,7 @@ export function Header() {
           <div className="hidden md:flex items-center space-x-6">
             <button className="p-2 gap-2 hover:text-[#b8967e]  items-center transition duration-300  flex flex-row">
               <PhoneCall size={20} />
-              <span>8477081261</span>
+              <span>+91 9582678877</span>
             </button>
             <button
               className="p-2 flex items-center"
