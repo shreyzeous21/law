@@ -4,6 +4,7 @@ import Philosophy from "./_components/Philosophy";
 import CounterBand from "./_components/CounterBand";
 import Place from "./_components/Place";
 import { ContactForm } from "@/components/ContactForm";
+import Breadcrumb from "@/components/ui/breadcrumb";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -26,6 +27,7 @@ const AboutUs = () => {
           }}
         >
           About Us
+          <Breadcrumb />
         </h1>
       </section>
       <Philosophy />

@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <div className="gap-10 flex flex-col">
       <Hero />
-      <hr />
       <AboutHome />
       <hr />
       <PracticeArea />
