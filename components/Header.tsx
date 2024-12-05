@@ -22,15 +22,12 @@ export function Header() {
         { name: "Terms", link: "/terms" },
       ],
     },
+    { title: "Blog", dropdownItems: [], link: "/blog" },
     {
       title: "Contact Us",
-      dropdownItems: [
-        { name: "Latest Posts", link: "/blog/latest" },
-        { name: "Categories", link: "/blog/categories" },
-        { name: "Authors", link: "/blog/authors" },
-      ],
+      dropdownItems: [],
+      link: "/contact",
     },
-    { title: "Careers", dropdownItems: [], link: "/careers" },
   ];
 
   const handleSearchSubmit = (e: React.FormEvent) => {
@@ -40,7 +37,7 @@ export function Header() {
   };
 
   return (
-    <header className="fixed w-full text-black  bg-slate-100 shadow-sm z-50 top-0">
+    <header className="fixed w-full text-white  bg-black shadow-sm z-50 top-0">
       <Topbar />
       <div className="max-w-6xl mx-auto px-2">
         <div className="flex justify-between items-center h-16 gap-10 lg:h-20">
@@ -48,7 +45,7 @@ export function Header() {
           <div className="flex gap-5 items-center">
             <div>
               <a href="/">
-                <img src="/logo.webp" alt="Logo" className="h-8 md:h-10" />
+                <img src="/logo.webp" alt="Logo" className="h-10 lg:h-16 " />
               </a>
             </div>
 
@@ -110,7 +107,7 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="fixed inset-0 top-16 z-40 md:hidden bg-white shadow-lg">
+        <div className="fixed inset-0 top-16 z-40 md:hidden text-black bg-white shadow-lg">
           <div className="px-4 pt-2 pb-3 space-y-1 h-full overflow-y-auto">
             {menuItems.map((item) =>
               item.dropdownItems.length > 0 ? (
@@ -139,7 +136,7 @@ export function Header() {
       {/* Search Modal */}
       {isSearchOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-          <div className="bg-white p-4 rounded-md shadow-lg w-full max-w-md">
+          <div className="bg-white text-black p-4 rounded-md shadow-lg w-full max-w-md">
             <button
               className="absolute top-2 right-2 p-2"
               onClick={() => setIsSearchOpen(false)}
@@ -189,7 +186,7 @@ function DesktopDropdownMenu({
         {title} <ChevronDown size={16} className="ml-1" />
       </button>
       {isOpen && (
-        <div className="absolute left-0 w-52 bg-white shadow-lg rounded-md">
+        <div className="absolute left-0 w-52 bg-white text-black shadow-lg rounded-md">
           {items.map((item) => (
             <a
               key={item.name}
