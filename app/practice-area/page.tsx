@@ -2,6 +2,8 @@ import React from "react";
 import { Metadata } from "next";
 
 import TestimonialsSection from "@/components/Testimonials";
+import ServiceCard from "./_components/ServiceCard";
+import ParallexBanner from "./_components/ParallexBanner";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -26,9 +28,10 @@ const Practice = () => {
           Practice Area
         </h1>
       </section>
-      <hr />
-      <hr />
-      <hr />
+      <ServiceCard />
+
+      <ParallexBanner />
+
       <TestimonialsSection />
       <hr />
     </div>
