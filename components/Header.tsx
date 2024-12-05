@@ -6,8 +6,8 @@ import Topbar from "./Topbar";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false); // For search modal
-  const [searchQuery, setSearchQuery] = useState(""); // For search input
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const pathname = usePathname();
 
   const menuItems = [
@@ -16,11 +16,13 @@ export function Header() {
     {
       title: "Practice Area",
       dropdownItems: [
-        { name: "About Us", link: "/about" },
-        { name: "Contact", link: "/contact" },
-        { name: "FAQ", link: "/faq" },
-        { name: "Terms", link: "/terms" },
+        { name: "Civil Litigation & Property Matters", link: "/" },
+        { name: "Service Law & Administrative Law", link: "/" },
+        { name: "Family & Matrimonial Law", link: "/" },
+        { name: "Labour & Employment Laws", link: "/" },
+        { name: "Criminal Litigation & Trial Advocacy", link: "/" },
       ],
+      link: "/practice-area",
     },
     { title: "Blog", dropdownItems: [], link: "/blog" },
     {
@@ -37,7 +39,7 @@ export function Header() {
   };
 
   return (
-    <header className="fixed w-full text-white  bg-black shadow-sm z-50 top-0">
+    <header className="fixed w-full text-white bg-black shadow-sm z-50 top-0">
       <Topbar />
       <div className="max-w-6xl mx-auto px-2">
         <div className="flex justify-between items-center h-16 gap-10 lg:h-20">
@@ -56,6 +58,7 @@ export function Header() {
                   <DesktopDropdownMenu
                     key={item.title}
                     title={item.title}
+                    link={item.link}
                     items={item.dropdownItems}
                     activePath={pathname}
                   />
@@ -114,6 +117,7 @@ export function Header() {
                 <MobileDropdown
                   key={item.title}
                   title={item.title}
+                  link={item.link}
                   items={item.dropdownItems}
                   activePath={pathname}
                 />
@@ -167,10 +171,12 @@ export function Header() {
 
 function DesktopDropdownMenu({
   title,
+  link,
   items,
   activePath,
 }: {
   title: string;
+  link: string;
   items: { name: string; link: string }[];
   activePath: string;
 }) {
@@ -182,9 +188,9 @@ function DesktopDropdownMenu({
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <button className="flex items-center text-lg">
+      <a href={link} className="flex items-center text-lg">
         {title} <ChevronDown size={16} className="ml-1" />
-      </button>
+      </a>
       {isOpen && (
         <div className="absolute left-0 w-52 bg-white text-black shadow-lg rounded-md">
           {items.map((item) => (
@@ -192,7 +198,7 @@ function DesktopDropdownMenu({
               key={item.name}
               href={item.link}
               className={`block px-4 py-2 hover:bg-gray-100 ${
-                activePath === item.link ? "text-[#b8967e] " : ""
+                activePath === item.link ? "text-[#b8967e]" : ""
               }`}
             >
               {item.name}
@@ -206,10 +212,12 @@ function DesktopDropdownMenu({
 
 function MobileDropdown({
   title,
+  link,
   items,
   activePath,
 }: {
   title: string;
+  link: string;
   items: { name: string; link: string }[];
   activePath: string;
 }) {
@@ -217,10 +225,7 @@ function MobileDropdown({
 
   return (
     <div>
-      <button
-        className="w-full flex justify-between py-2"
-        onClick={() => setIsOpen(!isOpen)}
-      >
+      <a href={link} className="w-full flex justify-between py-2">
         <span className="text-lg font-medium">{title}</span>
         <ChevronDown
           size={20}
@@ -228,7 +233,7 @@ function MobileDropdown({
             isOpen ? "rotate-180" : ""
           }`}
         />
-      </button>
+      </a>
       {isOpen && (
         <div className="pl-4 space-y-2">
           {items.map((item) => (
