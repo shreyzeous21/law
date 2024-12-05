@@ -3,7 +3,7 @@ import React from "react";
 
 const Topbar = () => {
   return (
-    <div className="border-b lg:block hidden">
+    <div className="border-b border-b-slate-800 lg:block hidden">
       {/* Adding border to the bottom of the entire topbar */}
       <div className="max-w-6xl px-3 py-2 w-full items-center flex justify-center mx-auto">
         <div className="flex flex-row justify-between items-center w-full">

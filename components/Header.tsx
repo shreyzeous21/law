@@ -53,7 +53,11 @@ export function Header() {
           <div className="flex gap-5 items-center">
             <div>
               <a href="/">
-                <img src="/logo.webp" alt="Logo" className="h-10 lg:h-16" />
+                <img
+                  src="/logo.webp"
+                  alt="Logo"
+                  className="h-14 w-auto lg:h-16"
+                />
               </a>
             </div>
 
@@ -92,7 +96,7 @@ export function Header() {
 
           {/* Mobile Icons */}
           <div className="flex items-center space-x-4 md:hidden">
-            <button className="p-2 flex items-center justify-center bg-[#b8967e] text-white font-semibold rounded-lg shadow-md hover:bg-[#a57865] transition duration-300">
+            <button className="text-sm p-2 flex items-center justify-center bg-[#b8967e] text-white font-semibold rounded-lg shadow-md hover:bg-[#a57865] transition duration-300">
               Request a callback
             </button>
 
@@ -106,7 +110,7 @@ export function Header() {
       {/* Mobile Navigation */}
       <motion.div
         initial={{ height: 0 }}
-        animate={{ height: isMenuOpen ? 'auto' : 0 }}
+        animate={{ height: isMenuOpen ? "auto" : 0 }}
         transition={{ duration: 0.5 }}
         className={`fixed inset-0 top-16 z-40 md:hidden text-black bg-white shadow-lg overflow-hidden`}
       >
