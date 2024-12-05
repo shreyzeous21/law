@@ -6,8 +6,6 @@ import Topbar from "./Topbar";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
   const pathname = usePathname();
 
   const menuItems = [
@@ -30,12 +28,6 @@ export function Header() {
       link: "/contact",
     },
   ];
-
-  const handleSearchSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Search query:", searchQuery);
-    // You can redirect to a search results page or filter content dynamically
-  };
 
   return (
     <header className="fixed w-full text-white bg-black shadow-sm z-50 top-0">
@@ -81,12 +73,7 @@ export function Header() {
               <PhoneCall size={20} />
               <span>+91 9582678877</span>
             </button> */}
-            <button
-              className="p-2 flex items-center"
-              onClick={() => setIsSearchOpen(true)}
-            >
-              <Search size={20} />
-            </button>
+            <button className="p-2 flex items-center"></button>
           </div>
 
           {/* Mobile Icons */}
@@ -94,12 +81,7 @@ export function Header() {
             <button className="p-2">
               <PhoneCall size={20} />
             </button>
-            <button
-              className="p-2 flex  items-center"
-              onClick={() => setIsSearchOpen(true)}
-            >
-              <Search size={20} />
-            </button>
+            <button className="p-2 flex  items-center"></button>
             <button className="p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -132,35 +114,6 @@ export function Header() {
                 </a>
               )
             )}
-          </div>
-        </div>
-      )}
-
-      {/* Search Modal */}
-      {isSearchOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-          <div className="bg-white text-black p-4 rounded-md shadow-lg w-full max-w-md">
-            <button
-              className="absolute top-2 right-2 p-2"
-              onClick={() => setIsSearchOpen(false)}
-            >
-              <X size={24} />
-            </button>
-            <form onSubmit={handleSearchSubmit}>
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search..."
-                className="w-full p-2 border rounded-md"
-              />
-              <button
-                type="submit"
-                className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-md"
-              >
-                Search
-              </button>
-            </form>
           </div>
         </div>
       )}
