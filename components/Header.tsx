@@ -24,7 +24,6 @@ export function Header() {
       ],
       link: "/practice-area",
     },
-    { title: "Blog", dropdownItems: [], link: "/blog" },
     {
       title: "Contact Us",
       dropdownItems: [],

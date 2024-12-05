@@ -4,7 +4,6 @@ import Philosophy from "./_components/Philosophy";
 import CounterBand from "./_components/CounterBand";
 import Place from "./_components/Place";
 import { ContactForm } from "@/components/ContactForm";
-import Article from "@/components/Article";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -36,8 +35,6 @@ const AboutUs = () => {
       <Place />
       <hr />
       <ContactForm />
-      <hr />
-      <Article />
       <hr />
     </div>
   );
