@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Menu, X, ChevronDown, Search, PhoneCall } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Topbar from "./Topbar";
 
@@ -14,11 +14,11 @@ export function Header() {
     {
       title: "Practice Area",
       dropdownItems: [
-        { name: "Civil Litigation & Property Matters", link: "/" },
-        { name: "Service Law & Administrative Law", link: "/" },
-        { name: "Family & Matrimonial Law", link: "/" },
-        { name: "Labour & Employment Laws", link: "/" },
-        { name: "Criminal Litigation & Trial Advocacy", link: "/" },
+        { name: "Civil Litigation & Property Matters", link: "/5" },
+        { name: "Service Law & Administrative Law", link: "/1" },
+        { name: "Family & Matrimonial Law", link: "/2" },
+        { name: "Labour & Employment Laws", link: "/3" },
+        { name: "Criminal Litigation & Trial Advocacy", link: "/4" },
       ],
       link: "/practice-area",
     },
@@ -29,6 +29,11 @@ export function Header() {
     },
   ];
 
+  const isActive = (link: string, dropdownItems: { link: string }[]) => {
+    if (link === pathname) return true;
+    return dropdownItems.some((item) => item.link === pathname);
+  };
+
   return (
     <header className="fixed w-full text-white bg-black shadow-sm z-50 top-0">
       <Topbar />
@@ -38,7 +43,7 @@ export function Header() {
           <div className="flex gap-5 items-center">
             <div>
               <a href="/">
-                <img src="/logo.webp" alt="Logo" className="h-10 lg:h-16 " />
+                <img src="/logo.webp" alt="Logo" className="h-10 lg:h-16" />
               </a>
             </div>
 
@@ -52,12 +57,13 @@ export function Header() {
                     link={item.link}
                     items={item.dropdownItems}
                     activePath={pathname}
+                    isActive={isActive(item.link, item.dropdownItems)}
                   />
                 ) : (
                   <a
                     key={item.title}
                     href={item.link}
-                    className={`text-lg ${
+                    className={`text-xl hover:text-[#b8967e] ${
                       pathname === item.link ? "text-[#b8967e]" : ""
                     }`}
                   >
@@ -69,19 +75,13 @@ export function Header() {
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
-            {/* <button className="p-2 gap-2 hover:text-[#b8967e]  items-center transition duration-300  flex flex-row">
-              <PhoneCall size={20} />
-              <span>+91 9582678877</span>
-            </button> */}
+            {/* Placeholder for additional elements */}
             <button className="p-2 flex items-center"></button>
           </div>
 
           {/* Mobile Icons */}
           <div className="flex items-center space-x-4 md:hidden">
-            <button className="p-2">
-              <PhoneCall size={20} />
-            </button>
-            <button className="p-2 flex  items-center"></button>
+            <button className="p-2 flex items-center"></button>
             <button className="p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -101,6 +101,7 @@ export function Header() {
                   link={item.link}
                   items={item.dropdownItems}
                   activePath={pathname}
+                  isActive={isActive(item.link, item.dropdownItems)}
                 />
               ) : (
                 <a
@@ -126,11 +127,13 @@ function DesktopDropdownMenu({
   link,
   items,
   activePath,
+  isActive,
 }: {
   title: string;
   link: string;
   items: { name: string; link: string }[];
   activePath: string;
+  isActive: boolean;
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -140,7 +143,12 @@ function DesktopDropdownMenu({
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <a href={link} className="flex items-center text-lg">
+      <a
+        href={link}
+        className={`flex items-center text-lg ${
+          isActive ? "text-[#b8967e]" : ""
+        }`}
+      >
         {title} <ChevronDown size={16} className="ml-1" />
       </a>
       {isOpen && (
@@ -149,7 +157,7 @@ function DesktopDropdownMenu({
             <a
               key={item.name}
               href={item.link}
-              className={`block px-4 py-2 hover:bg-gray-100 ${
+              className={`block hover:text-[#b8967e] px-4 py-2 hover:bg-gray-100 ${
                 activePath === item.link ? "text-[#b8967e]" : ""
               }`}
             >
@@ -167,17 +175,24 @@ function MobileDropdown({
   link,
   items,
   activePath,
+  isActive,
 }: {
   title: string;
   link: string;
   items: { name: string; link: string }[];
   activePath: string;
+  isActive: boolean;
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
-      <a href={link} className="w-full flex justify-between py-2">
+      <a
+        href={link}
+        className={`w-full flex justify-between py-2 ${
+          isActive ? "text-[#b8967e]" : ""
+        }`}
+      >
         <span className="text-lg font-medium">{title}</span>
         <ChevronDown
           size={20}
