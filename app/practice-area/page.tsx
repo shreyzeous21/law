@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import TestimonialsSection from "@/components/Testimonials";
 import ServiceCard from "./_components/ServiceCard";
 import ParallexBanner from "./_components/ParallexBanner";
+import Breadcrumb from "@/components/ui/breadcrumb";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -25,7 +26,10 @@ const Practice = () => {
             height: "350px",
           }}
         >
-          Practice Area
+          <span className="flex flex-col items-center">
+            <h1>Practice Area</h1>
+            <Breadcrumb />
+          </span>
         </h1>
       </section>
       <ServiceCard />

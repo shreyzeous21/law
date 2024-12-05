@@ -18,7 +18,7 @@ const AboutUs = () => {
     <div className="gap-10 flex flex-col">
       <section className="flex flex-col">
         <h1
-          className="h-auto text-white text-4xl font-bold flex items-center justify-center"
+          className="h-auto  text-white text-4xl font-bold flex items-center justify-center"
           style={{
             backgroundImage: 'url("/law-slider-2.jpg")',
             backgroundSize: "cover",
@@ -26,8 +26,10 @@ const AboutUs = () => {
             height: "350px",
           }}
         >
-          About Us
-          <Breadcrumb />
+          <span className="flex flex-col items-center">
+            <h1>About Us</h1>
+            <Breadcrumb />
+          </span>
         </h1>
       </section>
       <Philosophy />

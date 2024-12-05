@@ -12,11 +12,11 @@ const Breadcrumb = () => {
   }
 
   return (
-    <nav aria-label="breadcrumb" className=" bg-gray-200">
-      <div className="max-w-6xl py-1 mx-auto justify-center ">
+    <nav aria-label="breadcrumb" className=" ">
+      <div className="max-w-6xl py-1 mx-auto w-full items-center justify-center ">
         <ol className="flex space-x-2 text-sm">
           <li>
-            <Link href="/" className="text-blue-600 hover:underline">
+            <Link href="/" className="">
               Home
             </Link>
           </li>
@@ -28,7 +28,7 @@ const Breadcrumb = () => {
               <li key={index} className="flex items-center space-x-2">
                 <span>/</span>
                 {isLast ? (
-                  <span className="text-gray-500">
+                  <span className="text-[#b8967e]">
                     {decodeURIComponent(segment)}
                   </span>
                 ) : (

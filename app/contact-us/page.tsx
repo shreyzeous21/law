@@ -1,6 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
+import Breadcrumb from "@/components/ui/breadcrumb";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -22,7 +23,10 @@ const ContactUs = () => {
             height: "350px",
           }}
         >
-          Contact Us
+          <span className="flex flex-col items-center">
+            <h1>Contact Us</h1>
+            <Breadcrumb />
+          </span>
         </h1>
       </section>
       <ContactForm />
