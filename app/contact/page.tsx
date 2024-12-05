@@ -27,7 +27,7 @@ const ContactUs = () => {
       </section>
       <ContactForm />
 
-      <section className="flex justify-center w-full h-auto bg-black">
+      {/* <section className="flex justify-center w-full h-auto bg-black">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d348.887616127158!2d77.367175!3d28.613033000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce57e4c8df143%3A0x3e7993a6c3056c48!2sBhutani%20Cyberpark!5e1!3m2!1sen!2sin!4v1733387777650!5m2!1sen!2sin"
           width="100%"
@@ -37,7 +37,7 @@ const ContactUs = () => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-      </section>
+      </section> */}
       <hr />
     </div>
   );
