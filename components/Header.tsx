@@ -76,12 +76,17 @@ export function Header() {
 
           <div className="hidden md:flex items-center space-x-6">
             {/* Placeholder for additional elements */}
-            <button className="p-2 flex items-center"></button>
+            <button className="p-2 flex items-center justify-center bg-[#b8967e] text-white font-semibold rounded-lg shadow-md hover:bg-[#a57865] transition duration-300">
+              Request a callback
+            </button>
           </div>
 
           {/* Mobile Icons */}
           <div className="flex items-center space-x-4 md:hidden">
-            <button className="p-2 flex items-center"></button>
+            <button className="p-2 flex items-center justify-center bg-[#b8967e] text-white font-semibold rounded-lg shadow-md hover:bg-[#a57865] transition duration-300">
+              Request a callback
+            </button>
+
             <button className="p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>

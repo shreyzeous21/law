@@ -8,7 +8,11 @@ interface ProgressCardProps {
   isVisible: boolean;
 }
 
-const ProgressCard: React.FC<ProgressCardProps> = ({ value, label, isVisible }) => {
+const ProgressCard: React.FC<ProgressCardProps> = ({
+  value,
+  label,
+  isVisible,
+}) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -93,7 +97,11 @@ const ParallexBanner = () => {
         </motion.h1>
         <div className="flex px-4 flex-wrap justify-center gap-8 mb-8">
           <ProgressCard value={60} label="Case Win" isVisible={isVisible} />
-          <ProgressCard value={80} label="Legal Solutions" isVisible={isVisible} />
+          <ProgressCard
+            value={80}
+            label="Legal Solutions"
+            isVisible={isVisible}
+          />
         </div>
         <div className="text-lg">
           <p>Monday To Saturday 9.00 AM - 10.30 PM</p>
