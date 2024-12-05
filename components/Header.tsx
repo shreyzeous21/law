@@ -12,7 +12,7 @@ export function Header() {
 
   const menuItems = [
     { title: "Home", dropdownItems: [], link: "/" },
-    { title: "About Us", dropdownItems: [], link: "/about" },
+    { title: "About Us", dropdownItems: [], link: "/about-us" },
     {
       title: "Practice Area",
       dropdownItems: [
@@ -27,7 +27,7 @@ export function Header() {
     {
       title: "Contact Us",
       dropdownItems: [],
-      link: "/contact",
+      link: "/contact-us",
     },
   ];
 

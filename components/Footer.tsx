@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ChevronRight, Globe, Mail } from 'lucide-react';
+import { ArrowRight, ChevronRight, Globe, Mail } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -23,11 +23,11 @@ export default function Footer() {
               />
             </h3>
             <p className="text-gray-300 leading-relaxed">
-              4821 Ridge Top Cir, Anchorage
+              C-337, IIIrd Floor,
               <br />
-              Street, Alaska 99508, United States
+              Bhutani Cyber Park Plot No.28-29 Industrial Area Sector-62,
               <br />
-              America.
+              Noida-201309, Uttar Pradesh
             </p>
           </div>
 
@@ -48,21 +48,23 @@ export default function Footer() {
                 whileHover={{ x: 5, color: "#ffffff" }}
               >
                 <Mail className="h-4 w-4" />
-                <a href="mailto:info@example.com">info@example.com,</a>
+                <a href="mailto:info@advsarthakmittal.com">
+                  info@advsarthakmittal.com
+                </a>
               </motion.div>
-              <motion.div
+              {/* <motion.div
                 className="flex items-center gap-2 text-gray-300"
                 whileHover={{ x: 5, color: "#ffffff" }}
               >
                 <Mail className="h-4 w-4" />
                 <a href="mailto:support@igual.com">support@igual.com,</a>
-              </motion.div>
+              </motion.div> */}
               <motion.div
                 className="flex items-center gap-2 text-gray-300"
                 whileHover={{ x: 5, color: "#ffffff" }}
               >
                 <Globe className="h-4 w-4" />
-                <span>FAX - 555-123-4567</span>
+                <span>+91 9582678877</span>
               </motion.div>
             </div>
           </div>
@@ -79,17 +81,25 @@ export default function Footer() {
               />
             </h3>
             <ul className="space-y-2">
-              {["Blog", "About Us", "Contact Us"].map((item) => (
-                <motion.li key={item} whileHover={{ x: 5 }}>
-                  <Link
-                    href={`/${item.toLowerCase().replace(" ", "-")}`}
-                    className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
-                  >
-                    <ChevronRight className="h-4 w-4" />
-                    {item}
-                  </Link>
-                </motion.li>
-              ))}
+              {["Home", "About Us", "Practice Area", "Contact Us"].map(
+                (item) => {
+                  const path =
+                    item === "Home"
+                      ? "/"
+                      : `/${item.toLowerCase().replace(/ /g, "-")}`;
+                  return (
+                    <motion.li key={item} whileHover={{ x: 5 }}>
+                      <Link
+                        href={path}
+                        className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+                      >
+                        <ChevronRight className="h-4 w-4" />
+                        {item}
+                      </Link>
+                    </motion.li>
+                  );
+                }
+              )}
             </ul>
           </div>
 
@@ -113,7 +123,10 @@ export default function Footer() {
                 placeholder="Email Address"
                 className="bg-transparent border-gray-700 focus:border-gray-600"
               />
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Button size="icon" className="bg-[#E5B06E] hover:bg-[#d39f5c]">
                   <ArrowRight className="h-4 w-4" />
                 </Button>
@@ -133,15 +146,15 @@ export default function Footer() {
               className="text-[#E5B06E] hover:text-[#d39f5c]"
               whileHover={{ scale: 1.05 }}
             >
-              cxp
+              Sarthak Mittal
             </motion.a>
             . Designed by{" "}
             <motion.a
-              href="#"
+              href="https://www.coderxpoint.com"
               className="text-[#E5B06E] hover:text-[#d39f5c]"
               whileHover={{ scale: 1.05 }}
             >
-              cxp
+              CoderXpoint
             </motion.a>
           </p>
         </div>
