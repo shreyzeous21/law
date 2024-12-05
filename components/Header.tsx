@@ -6,6 +6,7 @@ import Topbar from "./Topbar";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openDropdowns, setOpenDropdowns] = useState<number[]>([]);
   const pathname = usePathname();
 
   const menuItems = [
@@ -34,6 +35,14 @@ export function Header() {
     return dropdownItems.some((item) => item.link === pathname);
   };
 
+  const toggleDropdown = (index: number) => {
+    setOpenDropdowns((prevState) =>
+      prevState.includes(index)
+        ? prevState.filter((i) => i !== index)
+        : [...prevState, index]
+    );
+  };
+
   return (
     <header className="fixed w-full text-white bg-black shadow-sm z-50 top-0">
       <Topbar />
@@ -49,10 +58,10 @@ export function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex space-x-4">
-              {menuItems.map((item) =>
+              {menuItems.map((item, index) =>
                 item.dropdownItems.length > 0 ? (
                   <DesktopDropdownMenu
-                    key={item.title}
+                    key={index}
                     title={item.title}
                     link={item.link}
                     items={item.dropdownItems}
@@ -61,7 +70,7 @@ export function Header() {
                   />
                 ) : (
                   <a
-                    key={item.title}
+                    key={index}
                     href={item.link}
                     className={`text-xl hover:text-[#b8967e] ${
                       pathname === item.link ? "text-[#b8967e]" : ""
@@ -75,7 +84,6 @@ export function Header() {
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
-            {/* Placeholder for additional elements */}
             <button className="p-2 flex items-center justify-center bg-[#b8967e] text-white font-semibold rounded-lg shadow-md hover:bg-[#a57865] transition duration-300">
               Request a callback
             </button>
@@ -98,19 +106,22 @@ export function Header() {
       {isMenuOpen && (
         <div className="fixed inset-0 top-16 z-40 md:hidden text-black bg-white shadow-lg">
           <div className="px-4 pt-2 pb-3 space-y-1 h-full overflow-y-auto">
-            {menuItems.map((item) =>
+            {menuItems.map((item, index) =>
               item.dropdownItems.length > 0 ? (
                 <MobileDropdown
-                  key={item.title}
+                  key={index}
+                  index={index}
                   title={item.title}
                   link={item.link}
                   items={item.dropdownItems}
                   activePath={pathname}
                   isActive={isActive(item.link, item.dropdownItems)}
+                  toggleDropdown={toggleDropdown}
+                  isOpen={openDropdowns.includes(index)}
                 />
               ) : (
                 <a
-                  key={item.title}
+                  key={index}
                   href={item.link}
                   className={`block py-2 text-lg ${
                     pathname === item.link ? "text-[#b8967e]" : ""
@@ -176,24 +187,28 @@ function DesktopDropdownMenu({
 }
 
 function MobileDropdown({
+  index,
   title,
   link,
   items,
   activePath,
   isActive,
+  toggleDropdown,
+  isOpen,
 }: {
+  index: number;
   title: string;
   link: string;
   items: { name: string; link: string }[];
   activePath: string;
   isActive: boolean;
+  toggleDropdown: (index: number) => void;
+  isOpen: boolean;
 }) {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div>
-      <a
-        href={link}
+      <button
+        onClick={() => toggleDropdown(index)}
         className={`w-full flex justify-between py-2 ${
           isActive ? "text-[#b8967e]" : ""
         }`}
@@ -205,7 +220,7 @@ function MobileDropdown({
             isOpen ? "rotate-180" : ""
           }`}
         />
-      </a>
+      </button>
       {isOpen && (
         <div className="pl-4 space-y-2">
           {items.map((item) => (
