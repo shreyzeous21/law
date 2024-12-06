@@ -113,7 +113,7 @@ const PracticeAreaPage: React.FC = () => {
               <motion.img
                 src={practiceArea.image}
                 alt={practiceArea.title}
-                className="rounded-md w-1/2 object-contain h-auto"
+                className="rounded-md lg:w-1/2 w-auto object-contain h-auto"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
