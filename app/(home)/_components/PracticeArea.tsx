@@ -42,7 +42,7 @@ const PracticeArea = () => {
         {/* Second Practice Area Card */}
         <div className="lg:w-1/4 rounded-md h-auto text-xl text-white font-bold bg-slate-800 flex flex-col justify-between">
           <img
-            src="/law-slider-1.jpg"
+            src="/01.jpg"
             alt=""
             className="h-full w-auto rounded-md object-cover object-right"
           />
@@ -73,7 +73,7 @@ const PracticeArea = () => {
         {/* Second Practice Area Card */}
         <div className="lg:w-1/2 rounded-md lg:h-[50vh]  text-xl text-white font-bold bg-slate-800 flex flex-col justify-between">
           <img
-            src="/law-slider-1.jpg"
+            src="/02.jpg"
             alt=""
             className="h-full w-auto rounded-md object-cover object-right"
           />
@@ -99,7 +99,7 @@ const PracticeArea = () => {
         {/* Second Practice Area Card */}
         <div className="lg:w-1/2 rounded-md lg:h-[50vh]  text-xl text-white font-bold bg-slate-800 flex flex-col justify-between">
           <img
-            src="/law-slider-1.jpg"
+            src="/03.jpg"
             alt=""
             className="h-full w-auto rounded-md object-cover object-right"
           />
@@ -122,7 +122,7 @@ const PracticeArea = () => {
         {/* Second Practice Area Card */}
         <div className="lg:w-1/4 rounded-md h-auto text-xl text-white font-bold bg-slate-800 flex flex-col justify-between">
           <img
-            src="/law-slider-1.jpg"
+            src="/04.jpg"
             alt=""
             className="h-full w-auto rounded-md object-cover object-right"
           />
