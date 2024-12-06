@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import Topbar from "./Topbar";
+import Link from "next/link";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -105,14 +106,15 @@ export function Header() {
 
           <div className="hidden md:flex items-center space-x-6">
             <button className="p-2 flex items-center justify-center bg-[#b8967e] text-white font-semibold rounded-lg shadow-md hover:bg-[#a57865] transition duration-300">
-              Request a callback
+              <Link href="tel:+919582678877"> Request a callback</Link>
             </button>
           </div>
 
           {/* Mobile Icons */}
           <div className="flex items-center space-x-4 md:hidden">
             <button className="text-sm p-2 flex items-center justify-center bg-[#b8967e] text-white font-semibold rounded-lg shadow-md hover:bg-[#a57865] transition duration-300">
-              Request a callback
+              Request a callback{" "}
+              <Link href="tel:+919582678877"> Request a callback</Link>
             </button>
 
             <button className="p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>

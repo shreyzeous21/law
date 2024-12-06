@@ -1,4 +1,5 @@
 import { Mail, Phone } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const Topbar = () => {
@@ -16,7 +17,8 @@ const Topbar = () => {
           </a>
 
           <button className="hover:text-[#d7a179] flex gap-2 items-center transition duration-300">
-            <Phone className="w-5 h-5" /> +91 9582678877
+            <Phone className="w-5 h-5" />{" "}
+            <Link href="tel:+919582678877">+91 9582678877</Link>
           </button>
         </div>
       </div>
