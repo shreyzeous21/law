@@ -96,7 +96,7 @@ const PracticeAreaPage: React.FC = () => {
               }}
             >
               <span className="flex flex-col items-center">
-                <h1>{practiceArea.title}</h1>
+                <h1 className="text-center ">{practiceArea.title}</h1>
                 <Breadcrumb />
               </span>
             </h1>
