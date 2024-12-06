@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const PracticeArea = () => {
@@ -132,6 +134,10 @@ const PracticeArea = () => {
         </div>
       </div>
       {/* row-3 */}
+
+      <Button className=" mx-auto   bg-[#b8967e] text-white font-semibold rounded-lg shadow-md hover:bg-[#a57865] transition duration-300">
+        <Link href="/practice-area">View All Practices</Link>
+      </Button>
     </div>
   );
 };

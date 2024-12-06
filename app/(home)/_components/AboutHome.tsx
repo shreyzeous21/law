@@ -1,7 +1,6 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
-// import CountUp from "react-countup";
+import React, { useState, useEffect } from "react";
+import { motion, useInView } from "framer-motion";
 
 const AboutHome = () => {
   // Animation Variants
@@ -10,8 +9,33 @@ const AboutHome = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
 
+  // Counter state and function to handle the counting effect
+  const [experienceYears, setExperienceYears] = useState(0);
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+  useEffect(() => {
+    if (isInView) {
+      let start = 0;
+      const end = 25; // Number of years of experience
+      const duration = 2000; // Duration in milliseconds
+      const increment = (end / duration) * 10;
+
+      const counter = setInterval(() => {
+        start += increment;
+        if (start >= end) {
+          clearInterval(counter);
+          start = end;
+        }
+        setExperienceYears(Math.round(start));
+      }, 10);
+
+      return () => clearInterval(counter);
+    }
+  }, [isInView]);
+
   return (
-    <div className=" justify-center mx-auto flex w-full ">
+    <div className="justify-center mx-auto flex w-full">
       <div className="max-w-6xl w-full gap-10 px-4 h-full flex flex-col lg:flex-row justify-center">
         {/* Images Section */}
         <motion.div
@@ -41,10 +65,12 @@ const AboutHome = () => {
               className="object-cover w-full h-full"
             />
           </motion.div>
-          <div className="bg-gray-200 w-full h-40 lg:h-48 rounded-lg shadow-md overflow-hidden flex flex-col justify-center items-start p-4">
+          <div
+            ref={ref}
+            className="bg-gray-200 w-full h-40 lg:h-48 rounded-lg shadow-md overflow-hidden flex flex-col justify-center items-start p-4"
+          >
             <span className="text-[#b8967e] text-4xl font-bold">
-              {/* <CountUp start={0} end={25} duration={5} />+ */}
-              25+
+              {experienceYears}+
             </span>
             <p className="text-black font-semibold text-lg">
               Years of Experience

@@ -54,7 +54,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   link,
 }) => (
   <motion.div
-    className="bg-gradient-to-r from-gray-900 to-[#b8967e] text-white rounded-lg shadow-md p-6 mb-6 hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between h-full min-h-[18rem]"
+    className="bg-gradient-to-r  from-gray-900 to-[#b8967e] text-white rounded-lg shadow-md p-6 mb-6 hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between h-full min-h-[18rem]"
     whileHover={{ scale: 1.05 }}
   >
     <div className="mb-4 flex-1">
