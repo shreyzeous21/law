@@ -213,7 +213,7 @@ export function ContactForm() {
           </div>
           <div className="hidden h-full lg:block">
             <Image
-              src="/law-slider-1.jpg"
+              src="/contact.jpg"
               alt="Lawyer working"
               width={1000}
               height={1000}
