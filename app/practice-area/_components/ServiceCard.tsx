@@ -2,43 +2,44 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
     title: "Civil Litigation & Property Matters",
     description:
       "Assisting clients in civil lawsuits, property disputes, and legal procedures to ensure fair resolution.",
-    link: "/5",
+    link: "civil-litigation-property-matters",
   },
   {
     title: "Service Law & Administrative Law",
     description:
       "Expertise in handling disputes related to service laws and administrative procedures affecting individuals and entities.",
-    link: "/1",
+    link: "service-law-administrative-law",
   },
   {
     title: "Family & Matrimonial Law",
     description:
       "Providing compassionate support and guidance for family disputes, divorce, child custody, and matrimonial issues.",
-    link: "/2",
+    link: "family-matrimonial-law",
   },
   {
     title: "Alternate Disputes Resolution",
     description:
       "Specializing in arbitration, mediation, and negotiation to resolve conflicts outside of court.",
-    link: "#",
+    link: "alternate-disputes-resolution",
   },
   {
     title: "Labour & Employment Laws",
     description:
       "Guiding employers and employees through the complexities of labor and employment regulations.",
-    link: "/3",
+    link: "labour-employment-laws",
   },
   {
     title: "Criminal Litigation & Trial Advocacy",
     description:
       "Experienced in defending and prosecuting criminal cases, providing strong representation in court.",
-    link: "/4",
+    link: "criminal-litigation-trial-advocacy",
   },
 ];
 
@@ -61,12 +62,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <h3 className="text-3xl font-semibold mb-2 border-b pb-2">{title}</h3>
       <p className="">{description}</p>
     </div>
-    <a
-      href={link}
-      className="text-white flex text-lg items-center hover:text-gray-200 mt-auto"
-    >
-      Learn More <ArrowRight className="ml-2" />
-    </a>
+    <Link href={`/practice-area/${link}`} legacyBehavior>
+      <a className="text-white flex text-lg items-center hover:text-gray-200 mt-auto">
+        Learn More <ArrowRight className="ml-2" />
+      </a>
+    </Link>
   </motion.div>
 );
 
