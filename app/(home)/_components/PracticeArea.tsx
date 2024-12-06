@@ -100,7 +100,8 @@ const PracticeArea = () => {
       <div className="flex flex-col gap-4  lg:flex-row h-auto w-full">
         <div className="bg-[#b8967e] lg:w-1/2 gap-4 flex flex-col rounded-md p-10">
           <p className="text-white text-4xl font-semibold">
-            Our Practice Area Get what we have done for solving the problems you have facing.
+            Our Practice Area Get what we have done for solving the problems you
+            have facing.
           </p>
           <button className="flex text-white hover:text-[#383430] duration-300 transition">
             View All Service <ArrowRight />
