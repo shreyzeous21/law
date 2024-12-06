@@ -12,8 +12,7 @@ const Hero = () => {
     {
       title: "Leave Court to us",
       subtitle: "The Legal Advice Need Phone Call Away",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi libero non eius vel explicabo labore saepe deserunt ipsam commodi facilis nulla voluptas harum, natus consequatur architecto, voluptates obcaecati quae?",
+      description: "We will givev you proper solutions for cases.",
       image: "/law-slider-1.jpg",
     },
     {

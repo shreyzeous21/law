@@ -31,7 +31,7 @@ const PracticeArea = () => {
               />
             </span>
           </div>
-          <p>Civil Litigation</p>
+          <p>Civil Litigation & Property Matters</p>
         </div>
 
         {/* Second Practice Area Card */}
@@ -50,7 +50,7 @@ const PracticeArea = () => {
         {/* First Practice Area Card */}
         <div className="lg:w-1/2 text-4xl lg:h-[50vh]  rounded-md p-10 text-white font-bold bg-slate-800 flex flex-col justify-between">
           <div className="flex flex-row justify-between items-center w-full">
-            <span>01</span>
+            <span>02</span>
             <span>
               <img
                 src="/logo.png"
@@ -59,7 +59,7 @@ const PracticeArea = () => {
               />
             </span>
           </div>
-          <p>Civil Litigation</p>
+          <p>Service Law & Administrative Law</p>
         </div>
 
         {/* Second Practice Area Card */}
@@ -73,7 +73,7 @@ const PracticeArea = () => {
         {/* First Practice Area Card */}
         <div className="lg:w-1/2 text-4xl lg:h-[50vh] rounded-md p-10 text-white font-bold bg-slate-800 flex flex-col justify-between">
           <div className="flex flex-row justify-between items-center w-full">
-            <span>01</span>
+            <span>03</span>
             <span>
               <img
                 src="/logo.png"
@@ -82,7 +82,7 @@ const PracticeArea = () => {
               />
             </span>
           </div>
-          <p>Civil Litigation</p>
+          <p>Family & Matrimonial Law</p>
         </div>
 
         {/* Second Practice Area Card */}
@@ -100,8 +100,7 @@ const PracticeArea = () => {
       <div className="flex flex-col gap-4  lg:flex-row h-auto w-full">
         <div className="bg-[#b8967e] lg:w-1/2 gap-4 flex flex-col rounded-md p-10">
           <p className="text-white text-4xl font-semibold">
-            Practice areas showcase the diverse expertise of our legal team,
-            ensuring comprehensive support for a wide range of legal needs.
+            Our Practice Area Get what we have done for solving the problems.
           </p>
           <button className="flex text-white hover:text-[#383430] duration-300 transition">
             View All Service <ArrowRight />
@@ -119,7 +118,7 @@ const PracticeArea = () => {
         {/* First Practice Area Card */}
         <div className="lg:w-1/4 text-4xl h-auto rounded-md p-10 text-white font-bold bg-slate-800 flex flex-col justify-between">
           <div className="flex flex-row justify-between items-center w-full">
-            <span>01</span>
+            <span>04</span>
             <span>
               <img
                 src="/logo.png"
@@ -128,7 +127,7 @@ const PracticeArea = () => {
               />
             </span>
           </div>
-          <p>Civil Litigation</p>
+          <p>Labour & Employment Laws</p>
         </div>
       </div>
       {/* row-3 */}
