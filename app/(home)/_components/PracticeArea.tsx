@@ -22,7 +22,10 @@ const PracticeArea = () => {
         </div>
 
         {/* First Practice Area Card */}
-        <div className="lg:w-1/4 text-4xl h-auto rounded-md p-10 text-white font-bold bg-slate-800 flex flex-col justify-between">
+        <Link
+          href={"/practice-area/civil-litigation-property-matters"}
+          className="lg:w-1/4 text-4xl h-auto rounded-md p-10 text-white font-bold bg-slate-800 flex flex-col justify-between"
+        >
           <div className="flex flex-row justify-between items-center w-full">
             <span>01</span>
             <span>
@@ -30,11 +33,11 @@ const PracticeArea = () => {
                 src="/logo.png"
                 alt=""
                 className="h-12 w-12 object-contain rounded-full"
-              /> */}
+                /> */}
             </span>
           </div>
           <p>Civil Litigation & Property Matters</p>
-        </div>
+        </Link>
 
         {/* Second Practice Area Card */}
         <div className="lg:w-1/4 rounded-md h-auto text-xl text-white font-bold bg-slate-800 flex flex-col justify-between">
@@ -50,7 +53,10 @@ const PracticeArea = () => {
       {/* row-2 */}
       <div className="flex flex-col gap-4  lg:flex-row h-auto w-full">
         {/* First Practice Area Card */}
-        <div className="lg:w-1/2 text-4xl lg:h-[50vh]  rounded-md p-10 text-white font-bold bg-slate-800 flex flex-col justify-between">
+        <Link
+          href={"/practice-area/service-law-administrative-law"}
+          className="lg:w-1/2 text-4xl lg:h-[50vh]  rounded-md p-10 text-white font-bold bg-slate-800 flex flex-col justify-between"
+        >
           <div className="flex flex-row justify-between items-center w-full">
             <span>02</span>
             <span>
@@ -62,7 +68,7 @@ const PracticeArea = () => {
             </span>
           </div>
           <p>Service Law & Administrative Law</p>
-        </div>
+        </Link>
 
         {/* Second Practice Area Card */}
         <div className="lg:w-1/2 rounded-md lg:h-[50vh]  text-xl text-white font-bold bg-slate-800 flex flex-col justify-between">
@@ -73,7 +79,10 @@ const PracticeArea = () => {
           />
         </div>
         {/* First Practice Area Card */}
-        <div className="lg:w-1/2 text-4xl lg:h-[50vh] rounded-md p-10 text-white font-bold bg-slate-800 flex flex-col justify-between">
+        <Link
+          href={"/practice-area/family-matrimonial-law"}
+          className="lg:w-1/2 text-4xl lg:h-[50vh] rounded-md p-10 text-white font-bold bg-slate-800 flex flex-col justify-between"
+        >
           <div className="flex flex-row justify-between items-center w-full">
             <span>03</span>
             <span>
@@ -85,7 +94,7 @@ const PracticeArea = () => {
             </span>
           </div>
           <p>Family & Matrimonial Law</p>
-        </div>
+        </Link>
 
         {/* Second Practice Area Card */}
         <div className="lg:w-1/2 rounded-md lg:h-[50vh]  text-xl text-white font-bold bg-slate-800 flex flex-col justify-between">
@@ -119,7 +128,10 @@ const PracticeArea = () => {
           />
         </div>
         {/* First Practice Area Card */}
-        <div className="lg:w-1/4 text-4xl h-auto rounded-md p-10 text-white font-bold bg-slate-800 flex flex-col justify-between">
+        <Link
+          href={"/practice-area/labour-employment-laws"}
+          className="lg:w-1/4 text-4xl h-auto rounded-md p-10 text-white font-bold bg-slate-800 flex flex-col justify-between"
+        >
           <div className="flex flex-row justify-between items-center w-full">
             <span>04</span>
             <span>
@@ -131,7 +143,7 @@ const PracticeArea = () => {
             </span>
           </div>
           <p>Labour & Employment Laws</p>
-        </div>
+        </Link>
       </div>
       {/* row-3 */}
 
