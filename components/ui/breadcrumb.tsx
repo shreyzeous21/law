@@ -14,7 +14,7 @@ const Breadcrumb = () => {
   return (
     <nav aria-label="breadcrumb" className=" ">
       <div className="max-w-6xl py-1 mx-auto w-full items-center justify-center ">
-        <ol className="flex space-x-2 text-sm">
+        <ol className="flex space-x-2 text-xs">
           <li>
             <Link href="/" className="">
               Home
