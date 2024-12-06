@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
 import LegalServices from "../_components/ServiceCard";
+import { ContactForm } from "@/components/ContactForm";
 
 // Service data
 const services: Record<
@@ -138,6 +139,7 @@ const PracticeAreaPage: React.FC = () => {
           <hr />
           <LegalServices />
           <hr />
+          <ContactForm />
         </div>
       </div>
     </>

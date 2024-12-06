@@ -5,6 +5,7 @@ import TestimonialsSection from "@/components/Testimonials";
 import ServiceCard from "./_components/ServiceCard";
 import ParallexBanner from "./_components/ParallexBanner";
 import Breadcrumb from "@/components/ui/breadcrumb";
+import { ContactForm } from "@/components/ContactForm";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -37,6 +38,8 @@ const Practice = () => {
       <ParallexBanner />
 
       <TestimonialsSection />
+      <hr />
+      <ContactForm />
       <hr />
     </div>
   );
