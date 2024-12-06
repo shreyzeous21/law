@@ -109,7 +109,7 @@ const PracticeAreaPage: React.FC = () => {
             >
               {practiceArea.title}
             </motion.h1>
-            <div className="flex flex-row py-5 mx-auto items-center justify-center gap-10">
+            <div className="flex lg:flex-row  flex-col py-5 mx-auto items-center justify-center gap-10">
               <motion.img
                 src={practiceArea.image}
                 alt={practiceArea.title}
