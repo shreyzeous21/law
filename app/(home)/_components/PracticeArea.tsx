@@ -24,11 +24,11 @@ const PracticeArea = () => {
           <div className="flex flex-row justify-between items-center w-full">
             <span>01</span>
             <span>
-              <img
+              {/* <img
                 src="/logo.png"
                 alt=""
                 className="h-12 w-12 object-contain rounded-full"
-              />
+              /> */}
             </span>
           </div>
           <p>Civil Litigation & Property Matters</p>
@@ -52,11 +52,11 @@ const PracticeArea = () => {
           <div className="flex flex-row justify-between items-center w-full">
             <span>02</span>
             <span>
-              <img
+              {/* <img
                 src="/logo.png"
                 alt=""
                 className="h-12 w-12 object-contain rounded-full"
-              />
+              /> */}
             </span>
           </div>
           <p>Service Law & Administrative Law</p>
@@ -75,11 +75,11 @@ const PracticeArea = () => {
           <div className="flex flex-row justify-between items-center w-full">
             <span>03</span>
             <span>
-              <img
+              {/* <img
                 src="/logo.png"
                 alt=""
                 className="h-12 w-12 object-contain rounded-full"
-              />
+              /> */}
             </span>
           </div>
           <p>Family & Matrimonial Law</p>
@@ -100,7 +100,7 @@ const PracticeArea = () => {
       <div className="flex flex-col gap-4  lg:flex-row h-auto w-full">
         <div className="bg-[#b8967e] lg:w-1/2 gap-4 flex flex-col rounded-md p-10">
           <p className="text-white text-4xl font-semibold">
-            Our Practice Area Get what we have done for solving the problems.
+            Our Practice Area Get what we have done for solving the problems you have facing.
           </p>
           <button className="flex text-white hover:text-[#383430] duration-300 transition">
             View All Service <ArrowRight />
@@ -120,11 +120,11 @@ const PracticeArea = () => {
           <div className="flex flex-row justify-between items-center w-full">
             <span>04</span>
             <span>
-              <img
+              {/* <img
                 src="/logo.png"
                 alt=""
                 className="h-12 w-12 object-contain rounded-full"
-              />
+              /> */}
             </span>
           </div>
           <p>Labour & Employment Laws</p>
