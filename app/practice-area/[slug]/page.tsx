@@ -24,7 +24,7 @@ const services: Record<
   "service-law-administrative-law": {
     title: "Service Law & Administrative Law",
     description: `
-      <p>Our Team of Lawyers at Chambers of Vivek Kumar Tandon has an in-depth knowledge of the various rules and guidelines laid down by the DoPT to regulate the conditions of service. With the help of research on set precedents and landmark judgments, we try to arrive at a strategic proposition so as to help our clients to get the appropriate remedy to their grievances. Our advocates represent our clients against the Union of India and various of its Ministries/departments, Institutions, or PSUs and with the help of our research-oriented, strong approach give our clients the redressal of their issues.</p>`,
+      <p>Our Team of Lawyers at Chambers of Sarthak Mittal has an in-depth knowledge of the various rules and guidelines laid down by the DoPT to regulate the conditions of service. With the help of research on set precedents and landmark judgments, we try to arrive at a strategic proposition so as to help our clients to get the appropriate remedy to their grievances. Our advocates represent our clients against the Union of India and various of its Ministries/departments, Institutions, or PSUs and with the help of our research-oriented, strong approach give our clients the redressal of their issues.</p>`,
     image: "/service-law.jpg",
   },
   "family-matrimonial-law": {
