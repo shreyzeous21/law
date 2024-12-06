@@ -16,11 +16,26 @@ export function Header() {
     {
       title: "Practice Area",
       dropdownItems: [
-        { name: "Civil Litigation & Property Matters", link: "/5" },
-        { name: "Service Law & Administrative Law", link: "/1" },
-        { name: "Family & Matrimonial Law", link: "/2" },
-        { name: "Labour & Employment Laws", link: "/3" },
-        { name: "Criminal Litigation & Trial Advocacy", link: "/4" },
+        {
+          name: "Civil Litigation & Property Matters",
+          link: "/practice-area/civil-litigation-property-matters",
+        },
+        {
+          name: "Service Law & Administrative Law",
+          link: "/practice-area/service-law-administrative-law",
+        },
+        {
+          name: "Family & Matrimonial Law",
+          link: "/practice-area/family-matrimonial-law",
+        },
+        {
+          name: "Labour & Employment Laws",
+          link: "/practice-area/labour-employment-laws",
+        },
+        {
+          name: "Criminal Litigation & Trial Advocacy",
+          link: "/practice-area/criminal-litigation-trial-advocacy",
+        },
       ],
       link: "/practice-area",
     },

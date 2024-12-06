@@ -32,7 +32,7 @@ const Breadcrumb = () => {
                     {decodeURIComponent(segment)}
                   </span>
                 ) : (
-                  <Link href={href} className="text-blue-600 hover:underline">
+                  <Link href={href} className="">
                     {decodeURIComponent(segment)}
                   </Link>
                 )}
