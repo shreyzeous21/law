@@ -96,20 +96,20 @@ const PracticeAreaPage: React.FC = () => {
               }}
             >
               <span className="flex flex-col items-center">
-                <h1>Practice Area</h1>
+                <h1>{practiceArea.title}</h1>
                 <Breadcrumb />
               </span>
             </h1>
           </section>
           <div className="max-w-6xl px-4  w-full mx-auto justify-center flex flex-col">
-            <motion.h1
+            {/* <motion.h1
               className="text-5xl font-bold text-center text-[#b8967e]"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
               {practiceArea.title}
-            </motion.h1>
+            </motion.h1> */}
             <div className="flex lg:flex-row  flex-col py-5 mx-auto items-center justify-center gap-10">
               <motion.img
                 src={practiceArea.image}
