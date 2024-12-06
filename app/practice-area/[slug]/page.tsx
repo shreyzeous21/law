@@ -140,6 +140,7 @@ const PracticeAreaPage: React.FC = () => {
           <LegalServices />
           <hr />
           <ContactForm />
+          <hr />
         </div>
       </div>
     </>
