@@ -148,7 +148,7 @@ export default function Footer() {
             >
               Sarthak Mittal
             </motion.a>
-            . Designed by{" "}
+            . Designed and developed by{" "}
             <motion.a
               href="https://www.coderxpoint.com"
               className="text-[#E5B06E] hover:text-[#d39f5c]"
