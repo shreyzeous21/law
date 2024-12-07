@@ -2,7 +2,7 @@ import { Mail, Phone } from "lucide-react";
 
 export function ContactBanner() {
   return (
-    <section className="w-full py-16 relative overflow-hidden bg-[url('/law-slider-1.jpg')] bg-cover bg-center bg-no-repeat">
+    <section className="w-full py-16 relative overflow-hidden bg-[url('/banner.jpg')] bg-cover bg-center bg-no-repeat">
       {/* Overlay with background color and opacity */}
       <div className="absolute inset-0 bg-[#0B3B2C]/80"></div>
       <div className="relative max-w-6xl px-4 mx-auto">
