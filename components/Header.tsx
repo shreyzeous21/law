@@ -104,16 +104,15 @@ export function Header() {
             </nav>
           </div>
 
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-6">
             <button className="p-2 flex items-center justify-center bg-[#b8967e] text-white font-semibold rounded-lg shadow-md hover:bg-[#a57865] transition duration-300">
               <Link href="tel:+919582678877"> Request a callback</Link>
             </button>
           </div>
 
           {/* Mobile Icons */}
-          <div className="flex items-center space-x-4 md:hidden">
-            <button className="text-sm p-2 flex items-center justify-center bg-[#b8967e] text-white font-semibold rounded-lg shadow-md hover:bg-[#a57865] transition duration-300">
-              Request a callback{" "}
+          <div className="flex items-center space-x-4 lg:hidden">
+            <button className="text-sm  p-2 flex items-center justify-center bg-[#b8967e] text-white font-semibold rounded-lg shadow-md hover:bg-[#a57865] transition duration-300">
               <Link href="tel:+919582678877"> Request a callback</Link>
             </button>
 
