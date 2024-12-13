@@ -37,6 +37,18 @@ export function Header() {
           name: "Criminal Litigation & Trial Advocacy",
           link: "/practice-area/criminal-litigation-trial-advocacy",
         },
+        {
+          name: "Dispute management & Litigation",
+          link: "/practice-area/dispute-management-litigation",
+        },
+        {
+          name: "Arbitration Mediation & ADR",
+          link: "/practice-area/arbitration-mediation-adr",
+        },
+        {
+          name: "Indirect Tax & GST",
+          link: "/practice-area/indirect-tax-gst",
+        },
       ],
       link: "/practice-area",
     },
@@ -64,7 +76,7 @@ export function Header() {
     <header className="fixed w-full text-white bg-black shadow-sm z-50 top-0">
       <Topbar />
       <div className="max-w-6xl mx-auto px-2">
-        <div className="flex justify-between items-center h-16 gap-10 lg:h-20">
+        <div className="flex justify-between items-center h-16 gap-10 lg:h-[7rem]">
           {/* Logo */}
           <div className="flex gap-5 items-center">
             <div>
@@ -72,7 +84,7 @@ export function Header() {
                 <img
                   src="/logo.webp"
                   alt="Logo"
-                  className="h-14 w-auto lg:h-16"
+                  className="h-14 w-auto lg:h-[6rem]"
                 />
               </a>
             </div>
@@ -233,20 +245,29 @@ function MobileDropdown({
 }) {
   return (
     <div>
-      <button
-        onClick={() => toggleDropdown(index)}
-        className={`w-full flex justify-between py-2 ${
-          isActive ? "text-[#b8967e]" : ""
-        }`}
-      >
-        <span className="text-lg font-medium">{title}</span>
-        <ChevronDown
-          size={20}
-          className={`transform transition-transform ${
+      <div className="w-full flex justify-between items-center py-2">
+        {/* Link to main page */}
+        <a
+          href={link}
+          className={`text-lg font-medium flex-1 ${
+            isActive ? "text-[#b8967e]" : ""
+          }`}
+        >
+          {title}
+        </a>
+
+        {/* Dropdown toggle */}
+        <button
+          onClick={() => toggleDropdown(index)}
+          className={`p-2 transform transition-transform ${
             isOpen ? "rotate-180" : ""
           }`}
-        />
-      </button>
+        >
+          <ChevronDown size={20} />
+        </button>
+      </div>
+
+      {/* Dropdown items */}
       {isOpen && (
         <div className="pl-4 space-y-2">
           {items.map((item) => (
@@ -265,3 +286,4 @@ function MobileDropdown({
     </div>
   );
 }
+

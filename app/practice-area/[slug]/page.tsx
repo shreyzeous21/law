@@ -54,6 +54,27 @@ const services: Record<
       <p>Experienced attorneys who excel at handling cases of a criminal and quasi-criminal nature, including but not limited to White Collar Crimes, Offenses under the Indian Penal Code, Economic Offenses, Corporate Frauds, CBI, Enforcement Directorate (ED), etc., make up the firm’s Criminal Litigation team.</p>`,
     image: "/criminal-litigation.jpg",
   },
+  "dispute-management-litigation": {
+    title: "Dispute management & Litigation",
+    description: `
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad saepe quod obcaecati necessitatibus est neque architecto, iure maiores dolorem voluptate, fugit repellat quo placeat voluptatem sequi inventore cumque sunt nihil.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repellat cupiditate minus adipisci, at explicabo. Qui blanditiis magnam ipsum dicta a, enim architecto rem nobis labore similique distinctio veniam odit.s</p>`,
+    image: "/criminal-litigation.jpg",
+  },
+  "arbitration-mediation-adr": {
+    title: "Arbitration Mediation & ADR",
+    description: `
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad saepe quod obcaecati necessitatibus est neque architecto, iure maiores dolorem voluptate, fugit repellat quo placeat voluptatem sequi inventore cumque sunt nihil.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repellat cupiditate minus adipisci, at explicabo. Qui blanditiis magnam ipsum dicta a, enim architecto rem nobis labore similique distinctio veniam odit.s</p>`,
+    image: "/criminal-litigation.jpg",
+  },
+  "indirect-tax-gst": {
+    title: "Indirect Tax & GST",
+    description: `
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad saepe quod obcaecati necessitatibus est neque architecto, iure maiores dolorem voluptate, fugit repellat quo placeat voluptatem sequi inventore cumque sunt nihil.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repellat cupiditate minus adipisci, at explicabo. Qui blanditiis magnam ipsum dicta a, enim architecto rem nobis labore similique distinctio veniam odit.s</p>`,
+    image: "/criminal-litigation.jpg",
+  },
 };
 
 const PracticeAreaPage: React.FC = () => {

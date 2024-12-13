@@ -44,7 +44,7 @@ const Hero = () => {
                 {/* Badge Section */}
                 <div className="hidden lg:flex flex-col items-center text-white space-y-10">
                   {/* Circular Badge */}
-                  <div className="relative flex items-center justify-center w-24 h-24 lg:w-32 lg:h-32 rounded-full border border-gray-500">
+                  {/* <div className="relative flex items-center justify-center w-24 h-24 lg:w-32 lg:h-32 rounded-full border border-gray-500">
                     <div className="flex flex-col items-center">
                       <span className="text-3xl sm:text-4xl font-bold text-gray-300">
                         25
@@ -53,7 +53,7 @@ const Hero = () => {
                         Years
                       </span>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Downward Arrow */}
                   <div className="animate-bounce">

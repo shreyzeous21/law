@@ -41,6 +41,21 @@ const services = [
       "Experienced in defending and prosecuting criminal cases, providing strong representation in court.",
     link: "criminal-litigation-trial-advocacy",
   },
+  {
+    title: "Dispute management & Litigation",
+    description: "dummy data ",
+    link: "dispute-management-litigation",
+  },
+  {
+    title: "Arbitration Mediation & ADR",
+    description: "dummy data ",
+    link: "arbitration-mediation-adr",
+  },
+  {
+    title: "Indirect Tax & GST",
+    description: "dummy data ",
+    link: "indirect-tax-gst",
+  },
 ];
 
 interface ServiceCardProps {
